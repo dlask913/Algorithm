@@ -37,7 +37,6 @@ public class JobScheduling {
             max += L[i];
         }
         A.add(max);
-
         // 1:3 , 1:7 , 1:15
         for ( int i =0; i<n; i++){
             max = 0;
@@ -47,7 +46,6 @@ public class JobScheduling {
             if(max<L[i]) max = L[i];
             A.add(max);
         }
-
         // 2:2 , 2:6 , 2:14
         for(int i = 0; i<n;i++){
             for(int j =0; j<n;j++){
@@ -63,7 +61,6 @@ public class JobScheduling {
                 }
             }
         }
-
         // 3:5, 3:13
         for(int i =0;i<n;i++){
             for ( int j =0; j<n;j++){
@@ -80,7 +77,6 @@ public class JobScheduling {
                 }
             }
         }
-
         // 4:4 , 8:8
         for(int i = 0; i<(2/n); i++){
             int x = 0;
@@ -94,7 +90,6 @@ public class JobScheduling {
             if(max<x) max = x;
             A.add(max);
         }
-
         // 4:4, 4:12
         for(int i =0;i<n;i++){
             for ( int j =0; j<n;j++){
@@ -113,7 +108,6 @@ public class JobScheduling {
                 }
             }
         }
-
         // 5: 11
         for(int i =0;i<n;i++){
             for ( int j =0; j<n;j++){
@@ -159,7 +153,6 @@ public class JobScheduling {
                 }
             }
         }
-
         // 7:9
         for(int i =0;i<n;i++){
             for ( int j =0; j<n;j++){
