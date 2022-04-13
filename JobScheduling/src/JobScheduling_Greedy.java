@@ -1,7 +1,6 @@
-import java.lang.reflect.Array;
 import java.util.*;
 import static javax.swing.UIManager.get;
-public class JobScheduling {
+public class JobScheduling_Greedy {
 
     public static void main(String[] args) {
         Random r = new Random();
@@ -9,7 +8,7 @@ public class JobScheduling {
         int n = 10; //scan.nextInt(); // 작업의 갯수 입력받기
         int s=0,f=0;
         List<JobS> L = new ArrayList<>();
-        JobScheduling job = new JobScheduling();
+        JobScheduling_Greedy job = new JobScheduling_Greedy();
 
         for (int i=0;i<n;i++){
             s = r.nextInt(10)+1;
