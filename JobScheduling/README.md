@@ -1,6 +1,6 @@
-### JobScheduling Algorithm_임나정
+### JobScheduling_bruteforce Algorithm_임나정
 
-**1. JobScheduling**
+**1. JobScheduling_bruteforce**
  : n개의 작업, 각 작업의 수행시간 t_i, i=1, 2, 3, .., n , 그리고 m개의 동일한 기계가 주어질 때, 모든 작업이 가장 빨리 종료되도록 작업을 기계에 배정하는 문제이다. 단, 한 작업은 배정된 기계에서 연속적으로 수행되어야 하고 기계는 1번에 하나의 작업만을 수행한다. 
 
 **2. 최적해와 근사해의 근사비율**
