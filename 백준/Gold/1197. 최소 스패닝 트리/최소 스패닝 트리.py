@@ -1,6 +1,6 @@
 import heapq
 v,e=map(int,input().split())
-tree= {x:[] for x in range(v+1)}
+tree= [[] for _ in range(v+1)]
 
 for _ in range(e):
     a,b,c=list(map(int,input().split()))
