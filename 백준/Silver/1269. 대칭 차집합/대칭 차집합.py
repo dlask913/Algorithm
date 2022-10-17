@@ -1,0 +1,5 @@
+nA,nB=map(int,input().split())
+a=set(map(int,input().split()))
+b=set(map(int,input().split()))
+c=len(a-b)+len(b-a)
+print(c)
