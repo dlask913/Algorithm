@@ -17,14 +17,10 @@ for _ in range(l):
 
 def direct_change():
     global lev
-    if lev == 0:
-        return 0
-    elif lev == 1:
-        return 2
-    elif lev == 2:
-        return 1
-    elif lev == 3:
-        return 3
+    if lev == 0:    return 0
+    elif lev == 1:  return 2
+    elif lev == 2:  return 1
+    elif lev == 3:  return 3
     elif lev > 3:
         lev = 0
         return 0
@@ -44,17 +40,13 @@ while True:
     if ( x != 0 or y != 0 ) and (x,y) in q:
         break
     q.append((x,y))
-    if graph[x][y]=='A':
-        graph[x][y]=2
-    else:
-        graph[x][y]=1
-        q.popleft()
+    if graph[x][y]=='A': graph[x][y]=1
+    else: q.popleft()
     if d and sec == d[0][0]:
         if d[0][1] == 'D':   lev += 1
         elif d[0][1] == 'L': lev -= 1
         temp = direct_change()
-        nx = dx[temp]
-        ny = dy[temp]
+        nx,ny = dx[temp],dy[temp]
         d.pop(0)
     x += nx
     y += ny
