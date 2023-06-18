@@ -1,4 +1,4 @@
-# [unrated] 크기가 작은 부분문자열 - 147355 
+# [level 1] 크기가 작은 부분문자열 - 147355 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/147355) 
 

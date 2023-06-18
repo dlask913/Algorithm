@@ -1,4 +1,4 @@
-# [unrated] 리코쳇 로봇 - 169199 
+# [level 2] 리코쳇 로봇 - 169199 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/169199) 
 

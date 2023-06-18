@@ -1,4 +1,4 @@
-# [unrated] 카드 뭉치 - 159994 
+# [level 1] 카드 뭉치 - 159994 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/159994) 
 

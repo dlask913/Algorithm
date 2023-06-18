@@ -1,4 +1,4 @@
-# [unrated] 덧칠하기 - 161989 
+# [level 1] 덧칠하기 - 161989 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/161989) 
 
