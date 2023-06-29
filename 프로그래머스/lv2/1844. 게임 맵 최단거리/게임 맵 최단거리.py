@@ -12,7 +12,6 @@ def bfs(maps):
         x,y,c = q.popleft()
         if x==n and y==m:
             return c
-        v[x][y]=1
         for i in range(4):
             nx,ny=x+dx[i],y+dy[i]
             if 0<=nx<=n and 0<=ny<=m and maps[nx][ny]==1 and v[nx][ny]==0:
