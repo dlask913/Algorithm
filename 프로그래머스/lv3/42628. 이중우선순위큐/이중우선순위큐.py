@@ -1,11 +1,9 @@
 import heapq
 def solution(operations):
-    answer = []
     hq = []
     max_hq = []
     
     for i in operations:
-       # print(i,hq,max_hq)
         x,y = i.split()
         if x=='I':
             heapq.heappush(hq,int(y))
@@ -20,6 +18,6 @@ def solution(operations):
             heapq.heappop(hq)
             max_hq = [-1*i for i in hq]
             heapq.heapify(max_hq)
-    if not hq:
-        return [0,0]
+            
+    if not hq: return [0,0]
     return [-max_hq[0],hq[0]]
