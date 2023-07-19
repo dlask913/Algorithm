@@ -8,11 +8,12 @@ def solution(n, edge):
         graph[i].append(j)
         graph[j].append(i)
     q = deque([(1,0)])
+    
     while q:
         x,c = q.popleft()
         for i in graph[x]:
             if v[i] == INF:
                 v[i] = c+1
                 q.append((i,v[i]))
-    answer = v.count(max(v[1:]))
+    answer = v.count(max(v))
     return answer
