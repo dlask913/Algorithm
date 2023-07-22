@@ -14,10 +14,11 @@ def calculate(apeach,v):
 def brute_force(lion,apeach, score, v, arrow):
     global res, ans
     if arrow >= 0:
-        tmp = calculate(apeach,v) # 어피치 점수
+        tmp = calculate(apeach,v) # 차이
         if tmp > res[0]:
             res= [tmp,score]
             ans = copy.deepcopy(v)
+            return
             
     for i in range(1,11):
         if v[i] == 0 and arrow >= lion[i]:
