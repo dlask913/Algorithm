@@ -1,6 +1,5 @@
 from collections import deque
 def bfs(maps,i,j,point):
-    global ans
     dx = [0,0,1,-1]
     dy = [1,-1,0,0]
     xlen,ylen = len(maps),len(maps[0])
