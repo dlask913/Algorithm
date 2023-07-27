@@ -10,7 +10,6 @@ def bfs(maps,i,j,point):
     while q:
         for _ in range(len(q)):
             x,y=q.popleft()
-            v[x][y] = 1
             for i in range(4):
                 nx,ny = dx[i]+x,dy[i]+y
                 if 0<=nx<xlen and 0<=ny<ylen and maps[nx][ny]!='X' and v[nx][ny] == 0:
