@@ -1,4 +1,5 @@
 import heapq
+# PRIM 
 def solution(n, costs):
     answer = 0
     graph = {i:[] for i in range(n)}
