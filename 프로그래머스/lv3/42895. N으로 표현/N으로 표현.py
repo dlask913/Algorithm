@@ -1,5 +1,5 @@
 def calculate(x,y):
-    r = set([])
+    r = set()
     for i in x:
         for j in y:
             r.add(i+j)
