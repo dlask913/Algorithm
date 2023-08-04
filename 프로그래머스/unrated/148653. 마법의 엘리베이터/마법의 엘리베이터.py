@@ -6,11 +6,10 @@ def solution(storey):
         if storey==0: break
         c = 10 ** k
         if num[k] > 5 or (num[k] == 5 and num[k + 1] >= 5):
-            tmp = num[k]
-            storey += (10 - tmp) * c
-            answer += abs(10 - tmp)
+            storey += (10 - num[k]) * c
+            answer += (10 - num[k])
         elif num[k] <= 5 or (num[k] == 5 and num[k + 1] < 5):
-            storey -= abs(num[k] * c)
+            storey -= (num[k] * c)
             answer += num[k]
         num = list(map(int, str(storey)))[::-1]
         num += [0]
