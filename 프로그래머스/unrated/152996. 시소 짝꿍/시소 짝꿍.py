@@ -1,5 +1,4 @@
 from collections import deque,Counter
-import math
 def solution(weights):
     answer = 0
     weights.sort()
