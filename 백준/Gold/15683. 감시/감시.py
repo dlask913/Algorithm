@@ -43,7 +43,7 @@ def blind_spot(r):
                 cnt += 1
     res.append(cnt)
 
-def bruteforce(seq,q,r,visit):
+def bruteforce(seq,q,r):
     if len(q)<=seq:
         blind_spot(r)
         return
@@ -53,7 +53,7 @@ def bruteforce(seq,q,r,visit):
         for i in dic[c]:
             temp = copy.deepcopy(r)
             cctv(x,y,i,temp)
-            bruteforce(k+1,q,temp,visit)
+            bruteforce(k+1,q,temp)
 
 q = deque()
 for i in range(n):
@@ -61,8 +61,7 @@ for i in range(n):
         if 0<office[i][j]<6:
             q.append((i,j,office[i][j]))
 
-visit = [0 for _ in range(len(q))]
 t = copy.deepcopy(office)
-bruteforce(0,q,t,visit)
+bruteforce(0,q,t)
 
 print(min(res))
