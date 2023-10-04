@@ -3,7 +3,7 @@ play = []
 for _ in range(n):
     play.append(list(map(int,input().split())))
 
-mini = [[0,0,0],[0,0,0]]
+mini = [[0,0,0],[0,0,0]] # 메모리 초과 방지
 maxi = [[0,0,0],[0,0,0]]
 for i in range(3):
     mini[0][i] = play[0][i]
@@ -18,8 +18,8 @@ for i in range(1,n):
     maxi[1][1] = max(maxi[0][0], maxi[0][1], maxi[0][2]) + play[i][1]
     maxi[1][2] = max(maxi[0][1], maxi[0][2]) + play[i][2]
 
-    for j in range(3):
+    for j in range(3): # 값 초기화
         mini[0][j] = mini[1][j]
         maxi[0][j] = maxi[1][j]
 
-print(max(maxi[0]),min(mini[0]))
+print(max(maxi[0]),min(mini[0])) # n=1 인 경우를 대비해 0번째 행의 값 출력
