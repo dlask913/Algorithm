@@ -12,7 +12,7 @@ def change(lev): # 방향 변경
 def horses(x,y,stat,cur): # 움직여야하는 말들 담기
     tmp = deque()
     l = len(stat[(x, y)])
-    for _ in range(l):  # (x,y) 좌표에 있는 말들 앞에서부터
+    for _ in range(l):  # (x,y) 좌표에 있는 말들 위에서부터
         num, direct = stat[(x, y)].pop()
         tmp.appendleft((num, direct))
         if num == cur:
