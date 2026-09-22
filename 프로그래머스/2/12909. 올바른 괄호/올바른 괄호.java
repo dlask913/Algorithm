@@ -2,7 +2,7 @@ import java.util.*;
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
-        Stack<Character> stack = new Stack<>();
+        ArrayDeque<Character> stack = new ArrayDeque<>();
         int n = s.length();
 
         for(int i=0; i<n; i++){
