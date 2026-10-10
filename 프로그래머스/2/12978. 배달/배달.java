@@ -13,10 +13,8 @@ class Solution {
     public int solution(int N, int[][] roads, int K) {
         int answer = 0;
         HashMap<Integer, List<Node>> hMap = new HashMap<>();
-        int[] dist = new int[N+1];
-        Arrays.fill(dist, Integer.MAX_VALUE);
         
-        // 그래프 초기화
+        // 양방향 그래프 초기화
         for(int i=1; i<=N; i++){
             hMap.put(i, new ArrayList<>());
         }
@@ -26,19 +24,25 @@ class Solution {
         }
         
         // 최소 비용 구하기
-        Deque<Integer> dq = new ArrayDeque<>();
-        dq.offer(1);
+        int[] dist = new int[N+1];
+        Arrays.fill(dist, Integer.MAX_VALUE);
         dist[1] = 0;
+
+        PriorityQueue<Node> pq = 
+            new PriorityQueue<>(Comparator.comparingInt(node -> node.cost));
+        pq.offer(new Node(1, 0));
         
-        while(!dq.isEmpty()){
-            int cur = dq.poll();
+        while(!pq.isEmpty()){
+            Node cur = pq.poll();
             
-            List<Node> candidates = hMap.get(cur);
+            if(cur.cost > dist[cur.num]) continue;
+            
+            List<Node> candidates = hMap.get(cur.num);
             for(Node next : candidates){
-                int nextCost = dist[cur] + next.cost;
+                int nextCost = dist[cur.num] + next.cost;
                 if (nextCost < dist[next.num]) { // 거리가 더 작은 경우만
                     dist[next.num] = nextCost;
-                    dq.offer(next.num);
+                    pq.offer(next);
                 }
             } 
         }
